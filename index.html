@@ -15,7 +15,6 @@
   }
   .container{text-align:center;width:100%;max-width:420px}
   .hint{font-size:15px;color:#d63384;margin-bottom:15px;font-weight:600}
-  /* الظرف */
   .envelope{
     position:relative;
     width:320px;height:210px;
@@ -47,8 +46,6 @@
   }
   @keyframes pulse{0%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.1)}100%{transform:translate(-50%,-50%) scale(1)}}
   .click-text{margin-top:12px;color:#ff5da2;font-weight:700;font-size:15px}
-
-  /* الرسالة */
   .letter{
     display:none;
     background:#fff;
@@ -58,4 +55,54 @@
     text-align:center;
     animation:pop .5s ease;
   }
-  @keyframes pop{
+  @keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+  .letter h2{font-size:22px;color:#ff2e88;margin-bottom:12px}
+  .letter h3{font-size:20px;margin-bottom:12px}
+  .letter p{
+    font-size:16px;line-height:1.7;color:#444;
+    white-space:pre-line;
+  }
+  .photo{
+    width:100%;
+    border-radius:18px;
+    margin-top:18px;
+    border:4px solid #ffd6e7;
+    object-fit:cover;
+  }
+  .always{
+    margin-top:18px;
+    font-size:19px;
+    font-weight:800;
+    color:#ff2e88;
+    line-height:1.5;
+  }
+  .love{margin-top:8px;color:#888;font-size:14px}
+</style>
+</head>
+<body>
+<div class="container">
+  <div id="envelopeBox">
+    <div class="hint">في جواب مستنيك 💌 دوس على القلب</div>
+    <div class="envelope" onclick="openLetter()">
+      <button class="heart-btn">💗</button>
+    </div>
+    <div class="click-text">دوس هنا يا حبيبي 👆💗</div>
+  </div>
+  <div class="letter" id="letter">
+    <h2>To my sweet boy🥹💗🖇️</h2>
+    <h3>𝑯𝑩𝒊ٓ𝑩𝒀❣️🌍</h3>
+    <p>Yasontyyy We have been together for a year and a half, the most beautiful time I spent with you, I love your take care about me, your love for me, and that you are by my side all the time in my life in my tiredness, and when I am happy or sad I hope that we still together for a long life and stay with me always ya habeby love you so much 🥹❣️🌍</p>
+    <img src="IMG_5459.jpeg" class="photo" alt="us">
+    <div class="always">I will always be by your side ❣️🌍</div>
+    <div class="love">بحبك أوي يا Yasonty 💗</div>
+  </div>
+</div>
+<script>
+function openLetter(){
+  document.getElementById('envelopeBox').style.display='none';
+  document.getElementById('letter').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
