@@ -99,16 +99,13 @@
 </div>
 <script>
 function openLetter(){
+ document.getElementById('player').innerHTML = '<iframe width="1" height="1" src="https://www.youtube.com/embed/27SI1RIcL5E?start=183&autoplay=1&loop=1&playlist=27SI1RIcL5E" frameborder="0" allow="autoplay"></iframe>';
   document.getElementById('envelopeBox').style.display='none';
   document.getElementById('letter').style.display='block';
   window.scrollTo({top:0,behavior:'smooth'});
 }
 </script>
- <div id="player"></div>
-<script>
-document.addEventListener('click', function(){
-  document.getElementById('player').innerHTML = '<iframe width="1" height="1" src="https://www.youtube.com/embed/27SI1RIcL5E?start=183&autoplay=1&loop=1&playlist=27SI1RIcL5E" frameborder="0" allow="autoplay"></iframe>';
-}, {once: true});
-</script>
+<div id="player"></div>
+
 </body>
 </html>
