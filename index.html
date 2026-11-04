@@ -104,5 +104,11 @@ function openLetter(){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 </script>
+ <div id="player" style="display:none"></div>
+<script>
+document.querySelector('.hint').addEventListener('click', function(){
+  document.getElementById('player').innerHTML = '<iframe width="0" height="0" src="https://www.youtube.com/embed/27SI1RIcL5E?start=183&autoplay=1&loop=1&playlist=27SI1RIcL5E" frameborder="0" allow="autoplay"></iframe>';
+});
+</script>
 </body>
 </html>
